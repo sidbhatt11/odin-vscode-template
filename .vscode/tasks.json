@@ -1,0 +1,55 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Run Tests",
+      "type": "process",
+      "command": "make",
+      "args": [
+        "test"
+      ],
+      "problemMatcher": [],
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "Run Tests with Debugging",
+      "type": "process",
+      "command": "make",
+      "args": [
+        "test-debug"
+      ],
+      "group": {
+        "kind": "test"
+      }
+    },
+    {
+      "label": "Build Application for Distribution",
+      "type": "process",
+      "command": "make",
+      "args": [
+        "build"
+      ],
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "Build Application for Debugging",
+      "type": "process",
+      "command": "make",
+      "args": [
+        "build-debug"
+      ],
+      "group": {
+        "kind": "build"
+      }
+    }
+  ]
+}
